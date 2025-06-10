@@ -2,7 +2,7 @@ function myMenuFunction() {
     var menuBth = document.getElementById('myNavMenu');
 
     if(menuBth.className === "nav-menu") {
-        menuBth.className += " responsive"; // Add space before "responsive"
+        menuBth.className += " responsive"; 
     } else {
         menuBth.className = "nav-menu";
     }
@@ -27,7 +27,7 @@ var intro = {
   
   var typing = new Typed(".typed-text", intro);
 
-// ScrollReveal from the top
+// ScrollReveal from the top !
 const sr = ScrollReveal({
     origin: "top",
     distance: "80px",
@@ -42,7 +42,7 @@ sr.reveal(".social_icons", { delay: 200 });
 sr.reveal(".project-box", { interval: 200 });
 sr.reveal(".top-header");
 
-// ScrollReveal from the left
+// ScrollReveal from the left !
 const srL = ScrollReveal({
     origin: "left",
     distance: "80px",
@@ -52,7 +52,7 @@ const srL = ScrollReveal({
 
 srL.reveal(".some-element-left");
 
-// ScrollReveal from the right
+// ScrollReveal from the right !
 const srR = ScrollReveal({
     origin: "right",
     distance: "80px",
