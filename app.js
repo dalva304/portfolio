@@ -15,7 +15,6 @@ toggleSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
 });
 
-
 var intro = {
     strings: ["hi! nice to meet you, i'm diana."].map(function(str) {
       return str.toLowerCase();
@@ -62,4 +61,3 @@ const srR = ScrollReveal({
 });
 
 srR.reveal(".some-element-right", { delay: 200 });
-
