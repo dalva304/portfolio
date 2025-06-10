@@ -30,7 +30,7 @@
 
 body{
     background: var(--body-color);
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 /*---dark-mode---*/
 
@@ -62,11 +62,11 @@ nav{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Better vertical alignment */
+    align-items: center; 
     width:100%;
     height:90px;
     background: var(--nav-color);
-    padding-inline: 5%; /* Changed from 10vw to percentage for better mobile */
+    padding-inline: 5%; 
     transition: 0.3s;
     z-index: 100;
 }
@@ -85,7 +85,7 @@ nav{
 }
 
 .nav_menu_list{
-    column-gap: 2rem; /* Better spacing */
+    column-gap: 2rem; 
     align-items: center;
 }
 
@@ -165,7 +165,7 @@ body.dark #moon{
 }
 
 body.dark p {
-    color: var(--color-white); /* Change this to any light color you want */
+    color: var(--color-white); 
 }
 
 body.dark h3{
@@ -173,7 +173,7 @@ body.dark h3{
 }
 /*----wrapper---*/
 .wrapper{
-    padding-inline: 5%; /* Better mobile padding */
+    padding-inline: 5%; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -233,7 +233,7 @@ body.dark h3{
     border-radius: 8px;
     cursor: pointer;
     gap:20px;
-    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    flex-wrap: wrap; /*wrap on small screens */
 }
 
 .text-btn .btn{
@@ -271,20 +271,20 @@ i{
     display: flex;
     margin-top: 30px;
     margin-left: 5px;
-    gap: 32px; /* Adjust spacing between icons */
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 32px; /* adjust spacing between icons */
+    flex-wrap: wrap; /*wrapping on small screens */
 }
 
 .social_icons .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Set width of the icon */
-    height: 40px; /* Set height of the icon */
+    width: 40px; /* width of icons ! */
+    height: 40px; /* height of icons ! */
     color: var(--icon-color); 
-    border-radius: 50%; /* Rounded shape */
+    border-radius: 50%; /* rounded shape */
     box-shadow: 0px 1px 5px 3px #e5acdb; 
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer; /* pointer cursor on hover */
     text-decoration: none;
 }
 
@@ -300,6 +300,35 @@ i{
 
 .social_icons:hover .icon-circle{
     cursor: pointer;
+}
+
+/*---featured image---*/
+.featured-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.image{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #86a1fa;
+    box-shadow: 0 20px 40px rgba(134, 161, 250, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image:hover{
+    transform: scale(1.05);
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /*---main---*/
@@ -338,7 +367,7 @@ i{
     background: transparent;
     box-shadow: 1px 8px 10px 2px var(--first-shadow);
     border-radius: 20px;
-    word-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; 
 }
 
 .about-me *{
@@ -369,7 +398,7 @@ i{
     font-size: 22px;
     margin-top: 10px;
     color: var(--text-color);
-    line-height: 1.6; /* Better readability */
+    line-height: 1.6; 
 }
 
 /*---abt info2---*/
@@ -384,7 +413,7 @@ i{
     background: transparent;
     box-shadow: 1px 8px 10px 2px var(--first-shadow);
     border-radius: 20px;
-    word-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; 
 }
 
 .about-me2 *{
@@ -415,7 +444,7 @@ i{
     font-size: 22px;
     margin-top: 10px;
     color: var(--text-color);
-    line-height: 1.6; /* Better readability */
+    line-height: 1.6; 
 }
 
 /*---skill---*/
@@ -428,7 +457,7 @@ i{
     padding: 10px 20px;
     border: 2px solid #e5acdb;
     border-radius: 20px;
-    word-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; 
 }
 
 .skill .skill-set{
@@ -438,14 +467,14 @@ i{
     flex-wrap: wrap;
     list-style-type: none; 
     padding: 0; 
-    max-width: 100%; /* Changed from 400px */
+    max-width: 100%; 
 }
 
 .skill .skill-set li{
     width: 50%;
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Add some spacing */
+    margin-bottom: 10px; 
 }
 
 .skill .skill-set li i{
@@ -456,7 +485,7 @@ i{
 .skill p{
     font-size: 20px;
     margin-top: 12px;
-    line-height: 1.6; /* Better readability */
+    line-height: 1.6; 
 }
 
 /*--projects !--*/
@@ -475,7 +504,7 @@ i{
     align-items: center;
     flex-direction: column;
     width: 30%;
-    min-width: 280px; /* Minimum width to prevent too narrow boxes */
+    min-width: 280px; 
     height: 250px;
     background: transparent;
     border: 2px solid #86a1fa;
@@ -483,10 +512,10 @@ i{
     box-shadow: 1px 8px 10px 2px var(--first-shadow);
     overflow: hidden;
     cursor: pointer;
-    padding: 20px; /* Add padding for better text spacing */
-    text-decoration: none !important; /* Force remove underlines */
-    color: inherit; /* Keep original text colors */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+    padding: 20px; 
+    text-decoration: none !important; /* remove underlines */
+    color: inherit; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .project-box:hover{
@@ -589,21 +618,33 @@ i{
     }
     
     .featured-box{
-        flex-direction: column;
+        flex-direction: column; 
         justify-content: center;
-        height: auto; /* Allow natural height */
+        height: auto;
         min-height: 100vh;
-        padding-top: 120px; /* Account for fixed nav */
+        padding-top: 120px;
+        gap: 2rem;
     }
+    
     .featured-text{
         width: 100%;
-        order: 2;
+        order: 2; 
         justify-content: center;
         align-content: flex-start;
         min-height: 60vh;
-        margin-top: 0; /* Reset margin */
-        padding-left: 0; /* Reset padding */
-        text-align: center; /* Center text on mobile */
+        margin-top: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .featured-image{
+        width: 100%;
+        order: 1; 
+    }
+    
+    .image{
+        width: 250px;
+        height: 250px;
     }
     
     .featured-text .hello{
@@ -616,13 +657,13 @@ i{
     
     .text-info{
         font-size: 16px;
-        padding: 0 20px; /* Add side padding */
+        padding: 0 20px; 
     }
     
     .social_icons{
         margin-top: 2em;
         justify-content: center;
-        margin-left: 0; /* Reset margin */
+        margin-left: 0; 
     }
     .row{
         display: flex;
@@ -641,7 +682,7 @@ i{
     }
     
     .skill{
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%; /* mobile */
     }
     
     .project-container{
@@ -658,7 +699,7 @@ i{
     }
     
     .nav-name{
-        font-size: 24px; /* Smaller logo on mobile */
+        font-size: 24px; /*small pfp for smaller screens ! */
     }
 }
 
@@ -672,6 +713,12 @@ i{
     .text-info{
         font-size: 16px;
     }
+    
+    .image{
+        width: 200px;
+        height: 200px;
+    }
+    
     .project-box{
         width: 100%;
         min-width: 200px;
@@ -688,7 +735,7 @@ i{
     }
     
     .social_icons{
-        gap: 20px; /* Reduce gap on very small screens */
+        gap: 20px; /*small screens */
     }
     
     .about-me p{
@@ -700,11 +747,11 @@ i{
     }
     
     .skill .skill-set li{
-        width: 100%; /* Stack skills vertically on very small screens */
+        width: 100%; /*for small screens*/
     }
     
     .about-info, .skill{
-        padding: 30px 25px; /* Reduce padding */
+        padding: 30px 25px; 
     }
 }
 
@@ -727,6 +774,11 @@ i{
     
     .text-info{
         font-size: 14px;
+    }
+    
+    .image{
+        width: 180px;
+        height: 180px;
     }
     
     .social_icons{
