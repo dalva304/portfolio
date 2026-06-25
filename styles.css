@@ -98,8 +98,8 @@ nav{
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    padding-inline: 15px;
-    margin-inline: 20px;
+    padding-inline: 8px;
+    margin-inline: 8px;
 }
 
 .nav-menu-btn{
@@ -447,45 +447,57 @@ i{
     line-height: 1.6; 
 }
 
+/*---about cards row---*/
+.about-cards-row {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.about-cards-row .col,
+.about-cards-row .about-info2 {
+    flex: 1;
+}
+
 /*---skill---*/
 .skill{
     position: relative;
-    max-width: 600px;
     width: 100%;
     background: transparent;
     box-shadow:1px 8px 10px 2px var(--first-shadow);
-    padding: 10px 20px;
+    padding: 20px 30px;
     border: 2px solid #e5acdb;
     border-radius: 20px;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 .skill .skill-set{
     color: #86a1fa;
-    margin-top: 5px;
-    display: flex; 
-    flex-wrap: wrap;
-    list-style-type: none; 
-    padding: 0; 
-    max-width: 100%; 
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    padding: 0;
+    gap: 8px 0;
 }
 
 .skill .skill-set li{
-    width: 50%;
     display: flex;
     align-items: center;
-    margin-bottom: 10px; 
+    margin-bottom: 6px;
 }
 
 .skill .skill-set li i{
     margin-right: 8px;
     font-size: 20px;
+    flex-shrink: 0;
 }
 
 .skill p{
     font-size: 20px;
     margin-top: 12px;
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 /*--projects !--*/
@@ -569,21 +581,39 @@ i{
         width: 320px;
         height: 320px;
     }
-    
+
     .wrapper{
         padding-inline: 3%;
     }
-    
+
     .featured-text .hello{
         font-size: 45px;
     }
-    
+
     .featured-name{
         font-size: 45px;
     }
-    
+
     .text-info{
         font-size: 18px;
+    }
+
+    .nav-link {
+        padding-inline: 5px;
+        margin-inline: 4px;
+        font-size: 14px;
+    }
+
+    .info-card {
+        padding: 28px 30px;
+    }
+
+    .info-card h3 {
+        font-size: 20px;
+    }
+
+    .info-card p {
+        font-size: 16px;
     }
 }
 
@@ -680,9 +710,13 @@ i{
     .about-info, .contact-info{
         width: 100%;
     }
-    
-    .skill{
-        max-width: 100%; /* mobile */
+
+    .about-cards-row {
+        flex-direction: column;
+    }
+
+    .skill .skill-set {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .project-container{
@@ -741,17 +775,33 @@ i{
     .about-me p{
         font-size: 18px;
     }
-    
+
     .skill p{
         font-size: 18px;
     }
-    
-    .skill .skill-set li{
-        width: 100%; /*for small screens*/
+
+    .skill .skill-set {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .about-info, .skill{
-        padding: 30px 25px; 
+        padding: 30px 25px;
+    }
+
+    .info-card {
+        padding: 24px 20px;
+    }
+
+    .info-card h3 {
+        font-size: 18px;
+    }
+
+    .info-card .card-meta {
+        font-size: 13px;
+    }
+
+    .info-card p {
+        font-size: 16px;
     }
 }
 
@@ -799,6 +849,59 @@ i{
     .about-info, .skill{
         padding: 20px 15px;
     }
+}
+
+/*---info cards (education, experience, organizations)---*/
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-card {
+    padding: 35px 40px;
+    border: 2px solid #86a1fa;
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    background: transparent;
+}
+
+.info-card.pink {
+    border-color: #e5acdb;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.info-card .card-meta {
+    font-size: 15px;
+    color: #86a1fa;
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.info-card.pink .card-meta {
+    color: #e5acdb;
+}
+
+.info-card p {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+body.dark .info-card h3 {
+    color: #e5acdb;
+}
+
+body.dark .info-card p {
+    color: var(--color-white);
 }
 
 .typed-text {
