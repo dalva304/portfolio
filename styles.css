@@ -888,7 +888,7 @@ i{
 .info-card.pink .card-meta {
     color: #e5acdb;
 }
-
+.info-card:visited,
 .info-card p {
     font-size: 18px;
     color: var(--text-color);
@@ -916,4 +916,13 @@ body.dark .info-card p {
 
 .some-element-left, .some-element-right {
     opacity: 0;
+}
+
+.verify-link,
+.verify-link:link,
+.verify-link:visited,
+.verify-link:hover,
+.verify-link:active {
+    color: inherit;
+    text-decoration: underline;
 }
