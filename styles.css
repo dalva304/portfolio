@@ -472,6 +472,10 @@ i{
     word-wrap: break-word;
 }
 
+.skill + .skill{
+    margin-top: 24px;
+}
+
 .skill .skill-set{
     color: #86a1fa;
     margin-top: 10px;

@@ -41,6 +41,10 @@ sr.reveal(".text-btn", { delay: 200 });
 sr.reveal(".social_icons", { delay: 200 });
 sr.reveal(".project-box", { interval: 200 });
 sr.reveal(".top-header");
+sr.reveal(".about-info", { delay: 100 });
+sr.reveal(".about-info2", { delay: 200 });
+sr.reveal(".skill", { interval: 200 });
+sr.reveal(".info-card", { interval: 150 });
 
 // ScrollReveal from the left !
 const srL = ScrollReveal({
