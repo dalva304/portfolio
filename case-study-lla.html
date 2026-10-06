@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diana | language learning app case study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <style>
+        /* ---- case study page additions (reuses site variables/colors from styles.css) ---- */
+        .cs-nav{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+            background: var(--nav-color);
+            padding-inline: 5%;
+            z-index: 100;
+        }
+        .cs-nav .nav-name{
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--logo-color);
+            text-decoration: none;
+        }
+        .cs-back{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .cs-back:hover{
+            color: var(--first-color);
+        }
+        .cs-wrapper{
+            padding-inline: 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 150px;
+            padding-bottom: 80px;
+        }
+        .cs-title h1{
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .cs-meta{
+            font-size: 15px;
+            color: var(--first-color);
+            font-weight: 500;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+        .cs-meta span{
+            color: var(--text-color);
+            font-weight: 400;
+        }
+        .cs-section{
+            margin-bottom: 40px;
+            padding: 35px 40px;
+            border: 2px solid #86a1fa;
+            border-radius: 20px;
+            box-shadow: 1px 8px 10px 2px var(--first-shadow);
+            background: transparent;
+        }
+        .cs-section.pink{
+            border-color: #e5acdb;
+        }
+        .cs-section h2{
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 18px;
+        }
+        .cs-section p{
+            font-size: 17px;
+            color: var(--text-color);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        .cs-section p:last-child{
+            margin-bottom: 0;
+        }
+        .cs-section ol, .cs-section ul{
+            margin-left: 20px;
+            margin-bottom: 14px;
+        }
+        .cs-section li{
+            font-size: 17px;
+            color: var(--text-color);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .cs-highlight{
+            color: var(--first-color);
+            font-weight: 600;
+        }
+        .cs-cta{
+            text-align: center;
+            margin-top: 60px;
+        }
+        .cs-figure{
+            margin: 24px 0 14px;
+            text-align: center;
+        }
+        .cs-figure img{
+            max-width: 100%;
+            border-radius: 14px;
+            border: 2px solid #86a1fa;
+            box-shadow: 1px 8px 10px 2px var(--first-shadow);
+        }
+        .cs-section.pink .cs-figure img{
+            border-color: #e5acdb;
+        }
+        .cs-figure figcaption{
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-color);
+            opacity: 0.8;
+            font-style: italic;
+        }
+        body.dark .cs-figure figcaption{
+            color: var(--color-white);
+        }
+        body.dark .cs-title h1,
+        body.dark .cs-section h2{
+            color: #e5acdb;
+        }
+        body.dark .cs-section p,
+        body.dark .cs-section li{
+            color: var(--color-white);
+        }
+        @media only screen and (max-width: 600px){
+            .cs-nav .nav-name{ font-size: 20px; }
+            .cs-title h1{ font-size: 28px; }
+            .cs-section{ padding: 25px 22px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="cs-nav">
+        <a href="index.html" class="nav-name">diana.</a>
+        <a href="index.html" class="cs-back">
+            <i class="uil uil-arrow-left"></i> back to portfolio
+        </a>
+        <div class="mode">
+            <div class="moon-sun" id="toggle-switch">
+                <i class="fa fa-moon" id="moon"></i>
+                <i class="fa fa-sun" id="sun"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cs-wrapper">
+        <div class="cs-title">
+            <h1>language learning app: designing for context, not just translation</h1>
+        </div>
+        <div class="cs-meta">
+            Role: <span>Design Lead & Frontend Developer</span> &nbsp;·&nbsp;
+            Team: <span>4 people</span> &nbsp;·&nbsp;
+            Timeline: <span>Sep – Dec 2025</span> &nbsp;·&nbsp;
+            Tools: <span>Figma, React, Django, Gemini AI, Cursor</span>
+        </div>
+
+        <div class="cs-section">
+            <h2>the problem</h2>
+            <p>I think most people have this shared universal experience of wanting to learn a new language someday. Somewhere along the way though, I noticed a pattern: using translations tools always gave me direct translations, yet they rarely returned what I truly wanted to say or learn. It turns out language doesn't work like a dictionary. The same word can mean something different depending on the setting, the tone, or the part of the world you're in. That frustration is what pushed our team to build a web app that translates, but also shows you how a word or phrase is really used, with its context, pronunciation, and cultural nuance.</p>
+        </div>
+
+        <div class="cs-section pink">
+            <h2>getting the design wrong first</h2>
+            <p>As the one who proposed the project idea, I naturally led the 
+initial design process. I was the only one in my team who had taken a UI/ UX class, so I was dealing with strictly technical people. I pulled out a sheet of paper, pencil, some colored pens, and got to work by creating a user flow chart to break it down for the team. I communicated what features I thought we should include in the app, and mapped out how the user would go from simply entering a text to understanding a translation. As they were getting the hang of it, they also suggested features like a user database and the word pop-up. From there, I built a low-fidelity Figma draft to align the team before any code was written.</p>
+            <figure class="cs-figure">
+                <img src="case-study-images/flow-chart.png" alt="Hand-drawn user flow chart mapping out the app's screens and features">
+                <figcaption>Before any screens were designed, we mapped out the user flow by hand as a team — home, translation modes, and the word popup idea all started here.</figcaption>
+            </figure>
+            <p>When presenting the original design in the first meeting, it wasn't approved and received little to no feedback from our advisor. My teammates were also unable to give any insight due to this being their first project with design. Rather than guess at what to fix, I reached out to a UI/UX professor I'd taken a course with the year before. She pointed me toward the <span class="cs-highlight">10 Usability Heuristics</span> as a framework for evaluating the design, and suggested getting feedback from classmates outside our project team — people who'd use the app with fresh eyes, not ones already familiar with our goals.</p>
+            <p>I gathered that feedback, ran it against the heuristics, and used both to revise the design before moving into implementation.</p>
+            <figure class="cs-figure">
+                <img src="case-study-images/figma-draft.png" alt="Low-fidelity Figma draft of the app's home and translation screens">
+                <figcaption>Our third Figma draft, closest to what we ultimately built — though it still included login and sign-up screens we later cut (see below).</figcaption>
+            </figure>
+        </div>
+
+        <div class="cs-section">
+            <h2>building it: where the real trade-offs showed up</h2>
+            <p>Our Figma drafts included login and sign-up screens, but we were directed to prioritize the translation features themselves over building out a database — so the final build skipped user accounts entirely and put all our time into the core translation experience instead.</p>
+            <p>Most of the app came together smoothly — the file, text, and media translation pages shared a similar structure, so once one was built, the others followed quickly. The hardest part by far was the <span class="cs-highlight">word-definition popup</span>: a small UI element responsible for surfacing context, pronunciation, and a relevant image the moment a user tapped on a translated word.</p>
+            <figure class="cs-figure">
+                <img src="case-study-images/main-design.png" alt="Working text translation screen in the final React app">
+                <figcaption>The implemented text translation screen — built out from the Figma draft above.</figcaption>
+            </figure>
+            <p>The popup needed data from three different sources (a definition/context API, a pronunciation source, and Unsplash for imagery), and early versions loaded them all at once. This caused two problems: the layout would jump around as pieces loaded out of order, and — more confusingly — the image API was sometimes called twice, returning two different images for the same word.</p>
+            <p>Working with a teammate, I restructured the load sequence so the popup would:</p>
+            <ol>
+                <li>Load and confirm the context/definition first</li>
+                <li>Then fetch pronunciation</li>
+                <li>Then search for a relevant image, using the word <em>and</em> its confirmed context</li>
+            </ol>
+            <p>This fixed both the visual jumpiness and the duplicate-image bug, and it taught me something that stuck: a bug that looks technical (an API firing twice) is often a sequencing/UX problem in disguise — the fix wasn't "call the API less," it was "don't ask for the image until we actually know what the word means in context."</p>
+            <figure class="cs-figure">
+                <img src="case-study-images/popup-final.png" alt="Final word-definition popup showing context, pronunciation, and two relevant images">
+                <figcaption>The finished popup — context, pronunciation, and images now load in sequence instead of racing each other.</figcaption>
+            </figure>
+        </div>
+
+        <div class="cs-section pink">
+            <h2>validating with real users</h2>
+            <p>Once the core features were built, I asked classmates to test the app, specifically checking whether any part of the experience violated the Usability Heuristics we'd designed around — things like visibility of system status, consistency, and error prevention.</p>
+        </div>
+
+        <div class="cs-section">
+            <h2>what shipped vs. what i'd improve</h2>
+            <p>Given our timeline, the team made a deliberate call: prioritize getting the translation and context features working and accurate over polishing the visual experience. That was the right call for a semester-long project with a small team, but if I extended this work, the next iteration would focus on:</p>
+            <ul>
+                <li>Smoother transitions between translation states (currently abrupt)</li>
+                <li>More refined visual polish overall — the current UI is functional but not fully realized</li>
+                <li>Loading states in the popup, so users see why it takes a moment rather than a blank pause</li>
+                <li>A user database to save past translations, so returning users don't have to re-translate the same word or phrase from scratch</li>
+            </ul>
+        </div>
+
+        <div class="cs-section pink">
+            <h2>reflection</h2>
+            <p>This was one of the most demanding projects I had ever worked on, not because it couldn't be done, but because it required me to go out of my comfort zone and lead the design process — something I had never done before. The project delivery was successful because the team stayed communicative through check-ins, as well as everyone being open to feedback, like rejection (awkward i know). I learned to communicate with people whose focus is more technical, and I was able to teach them what I had learned, which helped me practice even more.  It's also where I first experienced, even at small scale, what agile development actually feels like day to day: constant feedback loops that push both individual work and the team's output forward.</p>
+        </div>
+
+        <div class="cs-cta">
+            <a href="index.html" class="btn">
+                <i class="uil uil-arrow-left"></i> back to portfolio
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const body = document.querySelector("body"),
+            toggleSwitch = document.getElementById("toggle-switch");
+
+        toggleSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+        });
+    </script>
+</body>
+</html>
